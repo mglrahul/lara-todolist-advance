@@ -80,6 +80,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="pagination"> {!! $tasks->links() !!} </div>
             </div>
         </div>
         @endif

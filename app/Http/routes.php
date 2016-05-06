@@ -24,3 +24,5 @@ Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
 Route::get('/edit/{task}', 'TaskController@edit');
 Route::post('/update/{task}', 'TaskController@update');
+Route::get('/paging', 'TaskController@paging');
+

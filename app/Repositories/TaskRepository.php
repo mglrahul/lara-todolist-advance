@@ -16,7 +16,8 @@ class TaskRepository
     {
         return $user->tasks()
                     ->orderBy('created_at', 'asc')
-                    ->get();
+                    ->paginate(2);
+                    //->get();
     }
     
     public function taskDetails(Task $task, $id)

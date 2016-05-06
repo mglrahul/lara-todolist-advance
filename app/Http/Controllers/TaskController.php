@@ -35,6 +35,17 @@ class TaskController extends Controller
         ]);
     }
 
+    public function paging(Request $request) {
+        //$tasks = $request->user()->tasks()->paginate(2);
+        $tasks = $this->tasks->forUser($request->user());
+//        $tasks = $user->tasks()
+//                    ->orderBy('created_at', 'asc')
+//                    ->paginate(2);
+        echo '<pre>'; print_r($tasks); die;
+        //$tasks = Task::paginate(2);
+        //return View::make('paging', compact('tasks'));
+    }
+  
     /**
      * Show the form for creating a new resource.
      *
