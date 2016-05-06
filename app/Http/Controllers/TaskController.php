@@ -41,8 +41,10 @@ class TaskController extends Controller
 //        $tasks = $user->tasks()
 //                    ->orderBy('created_at', 'asc')
 //                    ->paginate(2);
-        echo '<pre>'; print_r($tasks); die;
+        //echo '<pre>'; print_r($tasks); die;
         //$tasks = Task::paginate(2);
+        return view('tasks.paging')
+            ->with('tasks', $tasks);
         //return View::make('paging', compact('tasks'));
     }
   
