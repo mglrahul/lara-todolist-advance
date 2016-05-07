@@ -116,7 +116,7 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        echo 'hello'; 
+        //echo 'hello'; 
         $this->authorize('update', $task);
         
         $this->validate($request, [

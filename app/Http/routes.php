@@ -25,4 +25,7 @@ Route::delete('/task/{task}', 'TaskController@destroy');
 Route::get('/edit/{task}', 'TaskController@edit');
 Route::post('/update/{task}', 'TaskController@update');
 Route::get('/paging', 'TaskController@paging');
+Route::get('profile', 'UserController@profile');
+Route::post('profile-update', 'UserController@profile_update');
+
 
