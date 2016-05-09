@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'development'),
 
     /*
     |--------------------------------------------------------------------------
@@ -201,7 +201,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        //'Input' => Illuminate\Support\Facades\Input::class,
     ],
 
 ];
