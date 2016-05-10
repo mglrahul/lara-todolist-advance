@@ -1,6 +1,6 @@
 # To-do App - Laravel 5.2
 
-Simple to-do app built in Laravel 5.
+Simple to-do app built in Laravel 5.2.
 
 ## Installation
 
