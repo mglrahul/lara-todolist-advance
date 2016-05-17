@@ -13,6 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
+   // return 'hello';
+});
+
+Route::get('/admin/',function () {
+    return 'test';
 });
 
 Route::auth();
@@ -29,3 +34,23 @@ Route::get('profile', 'UserController@profile');
 Route::post('profile-update', 'UserController@profile_update');
 
 
+
+
+// backend routing
+
+
+Route::get('/admin/login','Adminauth\AuthController@showLoginForm');
+Route::post('/admin/login','Adminauth\AuthController@login');
+Route::get('/admin/password/reset','Adminauth\PasswordController@resetPassword');
+
+Route::group(['middleware' => ['admin']], function () {
+    //Login Routes...
+    Route::get('/admin/logout','Adminauth\AuthController@logout');
+	
+    // Registration Routes...
+    Route::get('admin/register', 'Adminauth\AuthController@showRegistrationForm');
+    Route::post('admin/register', 'Adminauth\AuthController@register');
+
+    Route::get('/admin', 'Admin\Employee@index');
+    Route::get('/admin/dashboard','Admin\Employee@test123');
+});
