@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 
-
+ 
 class AdminController extends Controller
 {
     /**
    * Function to retrieve the index page
    */
+    
   public function index()
   {
     $errors = "None";
